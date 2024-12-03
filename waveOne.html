@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wave One Emo Page">
+    <title>Wave One Emo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 100vh; /* Ensure body covers the full viewport height */
+            display: flex;
+            flex-direction: column;
+            position: relative; /* For positioning the bottom-right link */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 20px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            float: left;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            padding-bottom: 5px;
+        }
+
+        header h2 { 
+            margin: 0;
+            font-size: 16px;
+            padding: 30px 20px;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            background-color: #444;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 28px;
+        }
+
+        .text-body {
+            text-align: center;
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+            display: grid; /* Use CSS Grid layout */
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-template-rows: repeat(3, auto); /* 3 rows */
+            gap: 10px; /* Add spacing between items */
+        }
+
+        .text-body a {
+            text-decoration: none; /* Optional: Remove underlines from links */
+            color: #007BFF; /* Optional: Set link color */
+        }
+
+        .text-body-two {
+            text-align: center;
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .notable-artists {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px; /* Add spacing at the bottom */
+        }
+
+        /* Box next to the arrow */
+        .wave-two-box {
+            position: absolute;
+            bottom: 25px;
+            right: 60px; /* Adjusted to touch the arrow */
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px 0 0 5px; /* Rounded corners on left side */
+            font-size: 10px;
+        }
+
+        .wave-two-box:hover {
+            background-color: #555;
+        }
+
+        /* Arrow link styling */
+        .wave-two-arrow {
+            position: absolute;
+            bottom: 21px;
+            right: 30px;
+            width: 0;
+            height: 15px;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 30px solid #444; /* Arrow color */
+        }
+
+        .wave-two-arrow:hover {
+            border-left-color: #555; /* Change arrow color on hover */
+        }
+
+        .image-gallery {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Space between images */
+            border: 2px solid #333; /* Optional: border around the gallery */
+            padding: 10px;
+            border-radius: 5px;
+            background-color: white; /* Background color for the gallery */
+        }
+
+        img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners for images */
+        }
+
+        .audio-gallery {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Space between audio players */
+            margin: 20px; /* Margin around the audio gallery */
+            padding: 10px; /* Padding inside the gallery */
+            background-color: #fff; /* Background color for the gallery */
+            border: 2px solid #333; /* Optional: border around the gallery */
+            border-radius: 5px; /* Optional: rounded corners */
+        }
+
+        .audio-container {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        audio {
+            margin-top: 10px; /* Space above the audio player */
+            width: 100%; /* Make the player fill the container width */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="aboutEmo.html">About Emo</a></h1>
+        <a href="index.html" class="home-button">Home</a>
+        <h2>First Wave Emo</h2>
+    </header>
+
+
+    <div class="title">
+        <h2>First Wave Emo</h2>
+    </div>
+
+    <div class="text-body-two">
+        <p>The genre of Emo began in the 1980’s in Washington DC, branching off of the hardcore and post-hardcore/punk scene. The first instance of an “Emo” band was the band Rites of Spring.  This band blended together the raw intense sound of hardcore punk music with their deeply personal “emotional” lyrics.  The lyrics have a major importance in shaping the genre as a whole, the lyrics are super personal and confessional, they explore complex topics surrounding brain turmoil and relationship struggles. In addition to the deep lyrics, first wave Emo had an upbeat dynamic song structure with sudden tempo changes, aggressive guitar/drum bursts. This primal iteration of Emo ultimately did not have any commercial success outside of the Washington DC region. </p>
+    </div>
+
+    <div class="notable-artists">
+        <h2>Notable Artists</h2>
+    </div>
+
+    <div style="font-size:24px" class="text-body">
+        <a href="https://en.wikipedia.org/wiki/Rites_of_Spring" style="font-size:24px">Rites Of Spring (1984-1986)</a>
+        <a href="https://en.wikipedia.org/wiki/Embrace_(American_band)" style="font-size:24px">Embrace (1985-1986)</a>
+        <a href="https://en.wikipedia.org/wiki/Moss_Icon" style="font-size:24px">Moss Icon (1986–1991 - Present)</a>
+        <a href="https://en.wikipedia.org/wiki/Beefeater_(band)">Beefeater (1984-1986)</a>
+        <a href="https://en.wikipedia.org/wiki/The_Faith_(American_band)">The Faith (1981-1983)</a>
+        <a href="https://en.wikipedia.org/wiki/Gray_Matter_(band)">Gray Matter (1983-1986)</a>
+    </div>
+
+    <!-- Audio Section -->
+    <div class="audio-gallery">
+        <div class="audio-container">
+            <p>Embrace - Building</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Building.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>Rites of Spring - For Want Of</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] For Want Of.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>Moss Icon - Mirror</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Mirror.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>Beefeater - Trash Funk</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Trash Funk.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <div class="title">
+        <h2>Gallery</h2>
+    </div>
+
+    <div class="image-gallery">
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/ritesOfSpringOne.jpeg" alt="Image 1">
+            <h1>Rites Of Spring</h1>
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/theFaithOne.jpeg" alt="Image 2">
+            <h1>The Faith</h1>
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/mossIconOne.jpeg" alt="Image 3">
+            <h1>Moss Icon</h1>
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/grayMatterOne.jpeg" alt="Image 4">
+            <h1>Gray Matter</h1>
+        </div>
+    </div>
+
+    
+    <a href="waveTwo.html" class="wave-two-box">Wave Two Emo</a>
+    <a href="waveTwo.html" class="wave-two-arrow"></a>
+</body>
+</html>

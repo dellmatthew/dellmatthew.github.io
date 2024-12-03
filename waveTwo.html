@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wave Two Emo Page">
+    <title>Wave One Emo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 100vh; /* Ensure body covers the full viewport height */
+            display: flex;
+            flex-direction: column;
+            position: relative; /* For positioning the bottom-right link */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 20px;
+            padding-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            float: left;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            padding-bottom: 5px;
+        }
+
+        header h2 { 
+            margin: 0;
+            font-size: 16px;
+            padding: 30px 20px;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            background-color: #444;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 28px;
+        }
+
+        .text-body {
+            text-align: center;
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+            display: grid; /* Use CSS Grid layout */
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-template-rows: repeat(3, auto); /* 3 rows */
+            gap: 10px; /* Add spacing between items */
+        }
+
+        .text-body a {
+            text-decoration: none; /* Optional: Remove underlines from links */
+            color: #007BFF; /* Optional: Set link color */
+        }
+
+        .text-body-two {
+            text-align: center;
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+
+        .notable-artists {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px; /* Add spacing at the bottom */
+        }
+
+        /* Box next to the arrow */
+        .box {
+            position: absolute;
+            bottom: 25px;
+            right: 60px; /* Adjusted to touch the arrow */
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px 0 0 5px; /* Rounded corners on left side */
+            font-size: 10px;
+        }
+
+        .box:hover {
+            background-color: #555;
+        }
+
+        /* Arrow link styling */
+        .arrow {
+            position: absolute;
+            bottom: 21px;
+            right: 30px;
+            width: 0;
+            height: 15px;
+            border-top: 12px solid transparent;
+            border-left: 30px solid #444; /* Arrow color */
+            border-bottom: 12px solid transparent;
+        }
+
+        .arrow:hover {
+            border-left-color: #555; /* Change arrow color on hover */
+        }
+        .box2 {
+            position: absolute;
+            bottom: 25px;
+            left: 60px; /* Adjusted to touch the arrow */
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0px 5px 5px 0px; /* Rounded corners on left side */
+            font-size: 10px;
+        }
+
+        .box2:hover {
+            background-color: #555;
+        }
+
+        /* Arrow link styling */
+        .arrow2 {
+            position: absolute;
+            bottom: 21px;
+            left: 30px;
+            width: 0;
+            height: 15px;
+            border-top: 12px solid transparent;
+            border-right: 30px solid #444; /* Arrow color */
+            border-bottom: 12px solid transparent;
+        }
+
+        .arrow2:hover {
+            border-left-color: #555; /* Change arrow color on hover */
+        }
+        
+        .image-gallery {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Space between images */
+            border: 2px solid #333; /* Optional: border around the gallery */
+            padding: 10px;
+            border-radius: 5px;
+            background-color: white; /* Background color for the gallery */
+        }
+
+        img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners for images */
+        }
+
+        .audio-gallery {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Space between audio players */
+            margin: 20px; /* Margin around the audio gallery */
+            padding: 10px; /* Padding inside the gallery */
+            background-color: #fff; /* Background color for the gallery */
+            border: 2px solid #333; /* Optional: border around the gallery */
+            border-radius: 5px; /* Optional: rounded corners */
+        }
+
+        .audio-container {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        audio {
+            margin-top: 10px; /* Space above the audio player */
+            width: 100%; /* Make the player fill the container width */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="aboutEmo.html">About Emo</a></h1>
+        <a href="index.html" class="home-button">Home</a>
+        <h2>Second Wave Emo</h2>
+    </header>
+   
+
+    <div class="title">
+        <h2>Midwest Emo</h2>
+    </div>
+
+    <div class="text-body-two">
+        <p>	Second wave emo is most commonly associated with “Midwest Emo” and begins as Emo leaves the Washington DC scene and begins to spread around the United States. Specifically the Midwest region of the US, hence its given name. At the time, the name referenced a specific region of Emo music, however it was later adapted to represent this second wave of Emo music as a whole, and Midwest Emo evolved to represent a subgenera of sorts within Emo music. </p>
+        <p>Similarly to its first wave roots, Midwest Emo continues to focus on the personal heart-wrenching topics that formed the genre. Singers would often perform in a way that diverged from traditional songwriting structures and create these pieces akin to lyrical poems. With inspirations from punk bands like The Smiths and Fugazi,  bands such as Sunny Day Real Estate, American Football, and many more formed. The style these new bands invented focused on the distinct whiney vocal and guitar melodies and were detaching from the hardcore roots that the genre was founded on.</p>
+        <p>At this point Emo is earning some of its stereotypes, with that of nerdy sensitive boys and girls that whine and mope over instruments.</p>
+        <p>The time period of Midwest Emo is marked throughout the 1990’s and it’s agreed that wave two Emo ends once the commercial success of Emo begins, after finally breaking into mainstream media in the summer of 2002.</p>
+    </div>
+
+    <div class="notable-artists">
+        <h2>Notable Artists</h2>
+    </div>
+
+    <div style="font-size:24px" class="text-body">
+        <a href="https://en.wikipedia.org/wiki/Sunny_Day_Real_Estate">Sunny Day Real Estate (1992-1995)</a>
+        <a href="https://en.wikipedia.org/wiki/Mineral_(band)" >Mineral (1994-1997)</a>
+        <a href="https://en.wikipedia.org/wiki/American_Football_(band)">American Football (1997-2000)</a>
+        <a href="https://en.wikipedia.org/wiki/Cap%27n_Jazz">Cap'n Jazz (1989-1995)</a>
+        <a href="https://en.wikipedia.org/wiki/The_Get_Up_Kids">The Get Up Kids (1995-2005)</a>
+        <a href="https://en.wikipedia.org/wiki/Jawbreaker_(band)">Jawbreaker (1986-1996)</a>
+    </div>
+
+    <div class="audio-gallery">
+        <div class="audio-container">
+            <p>Jawbreaker - Boxcar</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Boxcar.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>American Football - Never Meant</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Never Meant.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>Cap'n Jazz - Oh Messy Life</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Oh Messy Life.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p> American Football - For Sure</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] For Sure.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>    
+    
+    
+    <div class="title">
+        <h2>Gallery</h2>
+    </div>
+
+    <div class="image-gallery">
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/americanFootballOne.jpeg" alt="Image 1">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/americanFootballTwo.jpeg" alt="Image 2">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/capnJazzOne.jpeg" alt="Image 3">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/jawbreakerOne.jpeg" alt="Image 4">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/sunnyDayRealEstateOne.jpeg">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/sunnyDayRealEstateTwo.jpeg">
+        </div>
+
+    </div>
+
+    
+
+     <!-- Box and Arrow to Wave Two -->
+  
+    <a href="waveThree.html" class="box">Third Wave</a> <!-- Box -->
+    <a href="waveThree.html" class="arrow"></a> <!-- Arrow -->
+
+
+    <a href="waveOne.html" class="box2">First Wave</a> <!-- Box -->
+    <a href="waveOne.html" class="arrow2"></a> <!-- Arrow -->
+
+    <footer>
+        <p></p>
+    </footer>
+</body>
+</html>

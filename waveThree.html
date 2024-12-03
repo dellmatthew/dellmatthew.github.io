@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wave One Emo Page">
+    <title>Wave One Emo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 100vh; /* Ensure body covers the full viewport height */
+            display: flex;
+            flex-direction: column;
+            position: relative; /* For positioning the bottom-right link */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 20px;
+            padding-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            float: left;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            padding-bottom: 5px;
+        }
+
+        header h2 { 
+            margin: 0;
+            font-size: 16px;
+            padding: 30px 20px;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            background-color: #444;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 28px;
+        }
+
+        .text-body {
+            text-align: center;
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+            display: grid; /* Use CSS Grid layout */
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-template-rows: repeat(3, auto); /* 3 rows */
+            gap: 10px; /* Add spacing between items */
+        }
+
+        .text-body a {
+            text-decoration: none; /* Optional: Remove underlines from links */
+            color: #007BFF; /* Optional: Set link color */
+        }
+
+        .text-body-two {
+            text-align: center;
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+
+        .notable-artists {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px; /* Add spacing at the bottom */
+        }
+
+        /* Box next to the arrow */
+        .box {
+            position: absolute;
+            bottom: 25px;
+            right: 60px; /* Adjusted to touch the arrow */
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px 0 0 5px; /* Rounded corners on left side */
+            font-size: 10px;
+        }
+
+        .box:hover {
+            background-color: #555;
+        }
+
+        /* Arrow link styling */
+        .arrow {
+            position: absolute;
+            bottom: 21px;
+            right: 30px;
+            width: 0;
+            height: 15px;
+            border-top: 12px solid transparent;
+            border-left: 30px solid #444; /* Arrow color */
+            border-bottom: 12px solid transparent;
+        }
+
+        .arrow:hover {
+            border-left-color: #555; /* Change arrow color on hover */
+        }
+        .box2 {
+            position: absolute;
+            bottom: 25px;
+            left: 60px; /* Adjusted to touch the arrow */
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0px 5px 5px 0px; /* Rounded corners on left side */
+            font-size: 10px;
+        }
+
+        .box2:hover {
+            background-color: #555;
+        }
+
+        /* Arrow link styling */
+        .arrow2 {
+            position: absolute;
+            bottom: 21px;
+            left: 30px;
+            width: 0;
+            height: 15px;
+            border-top: 12px solid transparent;
+            border-right: 30px solid #444; /* Arrow color */
+            border-bottom: 12px solid transparent;
+        }
+
+        .arrow2:hover {
+            border-left-color: #555; /* Change arrow color on hover */
+        }
+        
+        .image-gallery {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Space between images */
+            border: 2px solid #333; /* Optional: border around the gallery */
+            padding: 10px;
+            border-radius: 5px;
+            background-color: white; /* Background color for the gallery */
+        }
+
+        img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners for images */
+        }
+
+        .audio-gallery {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Space between audio players */
+            margin: 20px; /* Margin around the audio gallery */
+            padding: 10px; /* Padding inside the gallery */
+            background-color: #fff; /* Background color for the gallery */
+            border: 2px solid #333; /* Optional: border around the gallery */
+            border-radius: 5px; /* Optional: rounded corners */
+        }
+
+        .audio-container {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        audio {
+            margin-top: 10px; /* Space above the audio player */
+            width: 100%; /* Make the player fill the container width */
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="aboutEmo.html">About Emo</a></h1>
+        <a href="index.html" class="home-button">Home</a>
+        <h2>Third Wave Emo</h2>
+    </header>
+   
+
+    <div class="title">
+        <h2>Mall Emo</h2>
+    </div>
+
+    <div class="text-body-two">
+        <p>Third wave Emo sees the expansion of Emo into the mainstream. In the early 2000’s, many record labels began to pick up many unnoticed artists inside the genre, bands such as Jimmy Eat World grew a steady following that spread mostly through word of mouth. Then, labels began promoting these bands like crazy, having them open for massive punk bands like Green Day and Weezer. These new bands started to incorporate a more “poppy” sound to their tracks </p>
+        <p>This leads into the summer of 2002 where Emo and stereotypical emo fashion went wild. The launch of MySpace is what allowed emo to get so mainstream. Bands like My Chemical Romance, Paramore, Fall Out Boy, and Panic! At the Disco dominated the scene. These bands and their style became iconic, often dubbed “mall emo”. They had black hair, skinny jeans, chains, and eyeliner.  These bands continued to explore themes of heartbreak, mental health, and self identification. These themes resonated heavily in the teenage youth at the time and the Emo subculture was formed for people who felt rejected or different from everyone around them. </p>
+        <p>With this being the most commercially successful iteration of Emo, it attracted tons of controversy both within and outside of the community.  People outside of the community viewed insiders as sensitive, and overtly whiney. Similarly, mall emo was disliked by some due to it being too commercial and detached from the true emotional roots of emo music.        </p>
+    </div>
+
+    <div class="notable-artists">
+        <h2>Notable Artists</h2>
+    </div>
+
+    <div style="font-size:24px" class="text-body">
+        <a href="https://en.wikipedia.org/wiki/My_Chemical_Romance">My Chemical Romance (2001-2013)</a>
+        <a href="https://en.wikipedia.org/wiki/Fall_Out_Boy" >Fall Out Boy (2001-2009)</a>
+        <a href="https://en.wikipedia.org/wiki/Jimmy_Eat_World">Jimmy Eat World (1993-present)</a>
+        <a href="https://en.wikipedia.org/wiki/Paramore">Paramore (2004-present)</a>
+        <a href="https://en.wikipedia.org/wiki/Taking_Back_Sunday">Taking Back Sunday (1999-present)</a>
+        <a href="https://en.wikipedia.org/wiki/Brand_New_(band)">Brand New (2000-2018)</a>
+    </div>
+
+    <div class="audio-gallery">
+        <div class="audio-container">
+            <p>Panic! At the Disco - Lying Is The Most Fun A Girl Can Have Without Taking Her Clothes Off</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Lying Is the Most Fun a Girl Can Have Without Taking Her Clothes Off.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>My Chemical Romance - Sleep</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Sleep.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>Fall Out Boy - Sugar, We're Going Down</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Sugar, We're Goin Down.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p> My Chemical Romance - The Ghost Of You</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] The Ghost of You.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>    
+    
+    
+    <div class="title">
+        <h2>Gallery</h2>
+    </div>
+
+    <div class="image-gallery">
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/thirdwave/Unknown.jpeg" alt="Image 1">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/thirdwave/Unknown2.jpeg" alt="Image 2">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/thirdwave/Unknown3.jpeg" alt="Image 3">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/thirdwave/Unknown4.jpeg" alt="Image 4">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/thirdwave/Unknown5.jpeg" alt="Image 4">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/thirdwave/Unknown6.jpeg" alt="Image 4">
+        </div>
+    </div>
+
+     <!-- Box and Arrow to Wave Two -->
+  
+    <a href="waveFour.html" class="box">Fourth Wave</a> <!-- Box -->
+    <a href="waveFour.html" class="arrow"></a> <!-- Arrow -->
+
+
+    <a href="waveTwo.html" class="box2">Second Wave</a> <!-- Box -->
+    <a href="waveTwo.html" class="arrow2"></a> <!-- Arrow -->
+
+    <footer>
+        <p></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wave One Emo Page">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 100vh; /* Ensure body covers the full viewport height */
+            display: flex;
+            flex-direction: column;
+            position: relative; /* For positioning the bottom-right link */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 20px;
+            padding-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            float: left;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            padding-bottom: 5px;
+        }
+
+        header h2 { 
+            margin: 0;
+            font-size: 16px;
+            padding: 30px 20px;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            background-color: #444;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 28px;
+        }
+
+        .text-body {
+            text-align: center;
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+            display: grid; /* Use CSS Grid layout */
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-template-rows: repeat(3, auto); /* 3 rows */
+            gap: 10px; /* Add spacing between items */
+        }
+
+        .text-body a {
+            text-decoration: none; /* Optional: Remove underlines from links */
+            color: #007BFF; /* Optional: Set link color */
+        }
+
+        .text-body-two {
+            text-align: center;
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+
+        .notable-artists {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px; /* Add spacing at the bottom */
+        }
+
+        /* Box next to the arrow */
+        .box {
+            position: absolute;
+            bottom: 25px;
+            right: 60px; /* Adjusted to touch the arrow */
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px 0 0 5px; /* Rounded corners on left side */
+            font-size: 10px;
+        }
+
+        .box:hover {
+            background-color: #555;
+        }
+
+        /* Arrow link styling */
+        .arrow {
+            position: absolute;
+            bottom: 21px;
+            right: 30px;
+            width: 0;
+            height: 15px;
+            border-top: 12px solid transparent;
+            border-left: 30px solid #444; /* Arrow color */
+            border-bottom: 12px solid transparent;
+        }
+
+        .arrow:hover {
+            border-left-color: #555; /* Change arrow color on hover */
+        }
+        .box2 {
+            position: absolute;
+            bottom: 25px;
+            left: 60px; /* Adjusted to touch the arrow */
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0px 5px 5px 0px; /* Rounded corners on left side */
+            font-size: 10px;
+        }
+
+        .box2:hover {
+            background-color: #555;
+        }
+
+        /* Arrow link styling */
+        .arrow2 {
+            position: absolute;
+            bottom: 21px;
+            left: 30px;
+            width: 0;
+            height: 15px;
+            border-top: 12px solid transparent;
+            border-right: 30px solid #444; /* Arrow color */
+            border-bottom: 12px solid transparent;
+        }
+
+        .arrow2:hover {
+            border-left-color: #555; /* Change arrow color on hover */
+        }
+        
+        .image-gallery {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Space between images */
+            border: 2px solid #333; /* Optional: border around the gallery */
+            padding: 10px;
+            border-radius: 5px;
+            background-color: white; /* Background color for the gallery */
+        }
+
+        img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners for images */
+        }
+
+        .audio-gallery {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Space between audio players */
+            margin: 20px; /* Margin around the audio gallery */
+            padding: 10px; /* Padding inside the gallery */
+            background-color: #fff; /* Background color for the gallery */
+            border: 2px solid #333; /* Optional: border around the gallery */
+            border-radius: 5px; /* Optional: rounded corners */
+        }
+
+        .audio-container {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        audio {
+            margin-top: 10px; /* Space above the audio player */
+            width: 100%; /* Make the player fill the container width */
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="aboutEmo.html">About Emo</a></h1>
+        <a href="index.html" class="home-button">Home</a>
+        <h2>Fourth Wave Emo</h2>
+    </header>
+   
+
+    <div class="title">
+        <h2>Emo Revival</h2>
+    </div>
+
+    <div class="text-body-two">
+        <p>Fourth Wave is also named Emo Revival and it is more of a return to the first and second wave emo roots. It combines the elements of midwest emo, math rock, and post rock. This wave has notable artists such as Modern Baseball, Mom Jeans, Title Fight, and Joyce Manor. These bands mainly took inspiration from the already established midwest emo scene and had a focus on this DIY sound. The sound of fourth wave emo more or less stayed consistent with that of the previous waves. There was a major focus on underground emo music during this time, with independent artists performing basement shows and as openers for more commercial emo bands. This era was like a revival and a tribute to the original sound of first and second wave emo. Additionally bands like American football and the Get-Up Kids began touring again.  One of the most important aspects of this wave is the creation of emo subgeneres, such as Emo Rap, that became extremely popular in the mid 2010’s.        </p>
+        <p>Emo rap is a subgenera of both hip-hop and emo. It emerged in the 2010’s in the Soundcloud era of hip hop. Soundcloud made independent music creation very accessible to almost anyone. Artists such as Juice World, Lil Peep, and XXXTentacion were extremely well known in the genre. The sound of Emo Rap blended together minimalist melancholic beats often mixed with guitar or piano looped melodies, and the lyrics would incorporate the artist’s feelings of loneliness and isolation. Many themes included drug use, heartbreak, and alienation.</p>
+    </div>
+
+    <div class="notable-artists">
+        <h2>Notable Artists</h2>
+    </div>
+
+    <div style="font-size:24px" class="text-body">
+        <a href="https://en.wikipedia.org/wiki/Modern_Baseball_(band)">Modern Baseball (2011-2017)</a>
+        <a href="https://en.wikipedia.org/wiki/Foxing_(band)" >Foxing (2011-present)</a>
+        <a href="https://en.wikipedia.org/wiki/The_World_Is_a_Beautiful_Place_%26_I_Am_No_Longer_Afraid_to_Die">The World Is a Beautiful Place & I Am No Longer Afraid to Die (2009-present)</a>
+        <a href="https://en.wikipedia.org/wiki/The_Front_Bottoms">The Front Bottoms (2006-present)</a>
+        <a href="https://en.wikipedia.org/wiki/Tiny_Moving_Parts">Tiny Moving Parts (2009-present)</a>
+        <a href="https://en.wikipedia.org/wiki/Into_It._Over_It">Into It. Over It (2007-present)</a>
+    </div>
+
+    <div class="notable-artists">
+        <h3>Emo Rappers</h3>
+    </div>
+
+    <div style="font-size:24px" class="text-body">
+        <a href="https://en.wikipedia.org/wiki/Lil_Peep">Lil Peep (2014-2017)</a>
+        <a href="https://en.wikipedia.org/wiki/XXXTentacion">XXXTentacion (2013-2018)</a>
+        <a href="https://en.wikipedia.org/wiki/Juice_WRLD">Juice WRLD (2013-2018)</a>
+        <a href="https://en.wikipedia.org/wiki/Lil_Tracy">Lil Tracy (2012-present)</a>
+    </div>
+
+    <div class="audio-gallery">
+        <div class="audio-container">
+            <p>Modern Baseball - Re-Do</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Re-Do.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>Modern Baseball - Tears Over Beers</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Tears Over Beers.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>The Front Bottoms - Twin Sized Mattress</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Twin Size Mattress.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p> The World Is a Beautiful Place & I Am No Longer Afraid To Die - Heartbeat In The Brain</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Heartbeat in the Brain.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>Lil Peep - The Song They Played (When I Crashed Into The Wall) </p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] the song they played (when i crashed into the wall).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>XXXTentacion - Hope</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Hope.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>    
+
+    <div class="title">
+        <h2>Gallery</h2>
+    </div>
+
+    <div class="image-gallery">
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/fourthwave/Unknown.jpeg" alt="Image 1">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/fourthwave/Unknown2.jpeg" alt="Image 2">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/fourthwave/Unknown3.jpeg" alt="Image 3">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/fourthwave/Unknown4.jpeg" alt="Image 4">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/fourthwave/Unknown5.jpeg" alt="Image 4">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/fourthwave/Modern_Baseball_band.JPG" alt="Image 4">
+        </div>
+    </div>
+
+     <!-- Box and Arrow to Wave Two -->
+  
+    <a href="waveFive.html" class="box">Fifth Wave</a> <!-- Box -->
+    <a href="waveFive.html" class="arrow"></a> <!-- Arrow -->
+
+
+    <a href="waveThree.html" class="box2">Third Wave</a> <!-- Box -->
+    <a href="waveThree.html" class="arrow2"></a> <!-- Arrow -->
+    
+    
+    <footer> </footer>
+</body>
+</html>

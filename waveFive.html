@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wave One Emo Page">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 100vh; /* Ensure body covers the full viewport height */
+            display: flex;
+            flex-direction: column;
+            position: relative; /* For positioning the bottom-right link */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 20px;
+            padding-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            float: left;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            padding-bottom: 5px;
+        }
+
+        header h2 { 
+            margin: 0;
+            font-size: 16px;
+            padding: 30px 20px;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            background-color: #444;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 28px;
+        }
+
+        .text-body {
+            text-align: center;
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+            display: grid; /* Use CSS Grid layout */
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-template-rows: repeat(3, auto); /* 3 rows */
+            gap: 10px; /* Add spacing between items */
+        }
+
+        .text-body a {
+            text-decoration: none; /* Optional: Remove underlines from links */
+            color: #007BFF; /* Optional: Set link color */
+        }
+
+        .text-body-two {
+            text-align: center;
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+
+        .notable-artists {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px; /* Add spacing at the bottom */
+        }
+
+        /* Box next to the arrow */
+        .box {
+            position: absolute;
+            bottom: 25px;
+            right: 60px; /* Adjusted to touch the arrow */
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px 0 0 5px; /* Rounded corners on left side */
+            font-size: 10px;
+        }
+
+        .box:hover {
+            background-color: #555;
+        }
+
+        /* Arrow link styling */
+        .arrow {
+            position: absolute;
+            bottom: 21px;
+            right: 30px;
+            width: 0;
+            height: 15px;
+            border-top: 12px solid transparent;
+            border-left: 30px solid #444; /* Arrow color */
+            border-bottom: 12px solid transparent;
+        }
+
+        .arrow:hover {
+            border-left-color: #555; /* Change arrow color on hover */
+        }
+        .box2 {
+            position: absolute;
+            bottom: 25px;
+            left: 60px; /* Adjusted to touch the arrow */
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0px 5px 5px 0px; /* Rounded corners on left side */
+            font-size: 10px;
+        }
+
+        .box2:hover {
+            background-color: #555;
+        }
+
+        /* Arrow link styling */
+        .arrow2 {
+            position: absolute;
+            bottom: 21px;
+            left: 30px;
+            width: 0;
+            height: 15px;
+            border-top: 12px solid transparent;
+            border-right: 30px solid #444; /* Arrow color */
+            border-bottom: 12px solid transparent;
+        }
+
+        .arrow2:hover {
+            border-left-color: #555; /* Change arrow color on hover */
+        }
+        
+        .image-gallery {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Space between images */
+            border: 2px solid #333; /* Optional: border around the gallery */
+            padding: 10px;
+            border-radius: 5px;
+            background-color: white; /* Background color for the gallery */
+        }
+
+        img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners for images */
+        }
+
+        .audio-gallery {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Space between audio players */
+            margin: 20px; /* Margin around the audio gallery */
+            padding: 10px; /* Padding inside the gallery */
+            background-color: #fff; /* Background color for the gallery */
+            border: 2px solid #333; /* Optional: border around the gallery */
+            border-radius: 5px; /* Optional: rounded corners */
+        }
+
+        .audio-container {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        audio {
+            margin-top: 10px; /* Space above the audio player */
+            width: 100%; /* Make the player fill the container width */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="aboutEmo.html">About Emo</a></h1>
+        <a href="index.html" class="home-button">Home</a>
+        <h2>Fifth Wave Emo</h2>
+    </header>
+   
+
+
+
+    <div class="title">
+        <h2>Modern Emo</h2>
+    </div>
+
+    <div class="text-body-two">
+        <p>Fifth wave emo or “Post emo” is still currently evolving and changing. The wave starts around 2020 and runs still today. Similarly to fourth wave emo, fifth wave accomplishes more of the same things, the focus had shifted back to it’s first and second wave roots. There are some new bands like Glass Beach, which they have this energetic and whimsical take on the genre. At this point, all of the subgenera and distinct sound have been blended together and what is considered “emo music” can really be about anything. Today, there are mixes of bedroom pop, shoegaze, or experimental rock within the genre. Fifth wave emo is still evolving, but at this point has mostly devolved and blended together with other genres and is just “Emotionally Driven Music”.</p>
+    </div>
+
+    <div class="notable-artists">
+        <h2>Notable Artists</h2>
+    </div>
+
+    <div style="font-size:24px" class="text-body">
+        <a href="https://en.wikipedia.org/wiki/Origami_Angel">Origami Angel (2017–present)</a>
+        <a href="https://en.wikipedia.org/wiki/Hungry_Lights">Hungry Lights (2014–present)</a>
+        <a href="https://en.wikipedia.org/wiki/Short_Fictions">Short Fictions (2015–present)</a>
+        <a href="https://en.wikipedia.org/wiki/Glass_Beach_(band)">Glass Beach (2018–present)</a>
+        <a href="https://en.wikipedia.org/wiki/Harmony_Woods">Harmony Woods (2016–present)</a>
+        <a href="https://en.wikipedia.org/wiki/For_Your_Health_(band)">For Your Health (2018–present)</a>
+        <a href="https://en.wikipedia.org/wiki/Home_Is_Where_(band)">Home Is Where (2017–present)</a>
+        <a href="https://en.wikipedia.org/wiki/Record_Setting">Record Setter (2010–present)</a>
+        <a href="https://en.wikipedia.org/wiki/Hey_I_Love_You">Hey, I Love You! (2019–present)</a>
+        <a href="https://en.wikipedia.org/wiki/Parannoul">Parannoul (2020–present)</a>
+    </div>
+    
+
+    <div class="audio-gallery">
+        <div class="audio-container">
+            <p>Parannoul - Beautiful World</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Beautiful World.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>Weatherday - Come In</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Come In.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p>Harmony Woods - Rhittenhouse</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Rittenhouse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-container">
+            <p> Asian Glow - Circumstances telling me who i am</p>
+            <audio controls>
+                <source src="/Users/matthewdellatorre/Documents/midterm/audio files/[SPOTDOWNLOADER.COM] Circumstances telling me who i am.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>    
+
+
+    <div class="title">
+        <h2>Gallery</h2>
+    </div>
+
+    <div class="image-gallery">
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/fifthwave/Unknown.jpeg" alt="Image 1">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/fifthwave/Unknown2.jpeg" alt="Image 2">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/fifthwave/Unknown3.jpeg" alt="Image 3">
+        </div>
+        <div class="image-container">
+            <img src="/Users/matthewdellatorre/Documents/midterm/images/fifthwave/Unknown4.jpeg" alt="Image 4">
+        </div>
+    </div>
+
+     <!-- Box and Arrow to Wave Two -->
+    <a href="waveFour.html" class="box2">Fourth Wave</a> <!-- Box -->
+    <a href="waveFour.html" class="arrow2"></a> <!-- Arrow -->
+
+    <footer>    </footer>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Example Page with Navigation Below Header and Home Button in Top Right">
+    <title>Page with Persistent Red Squares</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background-color: #444;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            padding: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .red-box {
+            position: absolute; 
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .full-screen-image {
+            width: 90vw;
+            height: 90vh;
+            object-fit: contain;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcme to Our Page</h1>
+        <a href="index.html" class="home-button">Home</a> <!-- Home button in the top right -->
+    </header>
+
+    <nav>
+        <a href="waveOne.html">Wave One</a> 
+        <a href="waveTwo.html">Wave Two</a> 
+        <a href="waveThree.html">Wave Three</a> 
+        <a href="waveFour.html">Wave Four</a> 
+        <a href="waveFive.html">Wave Five</a>
+    </nav>
+
+    <section>
+        <div class="content">
+            <h2>Introduction</h2>
+            <p>Emo is a genre of music that emerged in the mid-1980s, evolving from the hardcore punk scene in Washington D.C. Initially, emo was characterized by its emotional, introspective lyrics paired with the raw energy of punk music. Over the decades, emo has gone through distinct phases, commonly referred to as "waves," which represent shifts in sound, style, and cultural significance.</p>
+            <h2>Pin your location on the map! (Click anywhere on it)</h2>
+           
+        </div>
+    
+        <div class="image-container">
+            <img class="full-screen-image" src="/Users/matthewdellatorre/Documents/midterm/images/worldmap.jpeg" alt="Map Image" id="mapImage">
+        </div>
+    </section>
+
+    <footer>
+         <button id="resetButton" style="margin-top: 10px; padding: 10px 20px; background-color: #444; color: white; border: none; border-radius: 5px; cursor: pointer;">Reset Squares</button>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const mapImage = document.getElementById('mapImage');
+    const storedPositions = JSON.parse(localStorage.getItem('redBoxPositions')) || [];
+
+    function createRedBox(x, y) {
+        const redBox = document.createElement('div');
+        redBox.classList.add('red-box');
+        redBox.style.left = `${x}px`;
+        redBox.style.top = `${y}px`;
+        document.body.appendChild(redBox);
+    }
+
+    
+    storedPositions.forEach(position => createRedBox(position.x, position.y));
+
+  
+    let hasClicked = storedPositions.length > 0;
+
+    mapImage.addEventListener('click', function (event) {
+        if (hasClicked) return; 
+        
+        const x = event.pageX - 15;
+        const y = event.pageY - 15;
+
+        createRedBox(x, y);
+
+        
+        storedPositions.push({ x, y });
+        localStorage.setItem('redBoxPositions', JSON.stringify(storedPositions));
+
+        hasClicked = true; 
+    });
+
+
+    const resetButton = document.getElementById('resetButton');
+    resetButton.addEventListener('click', function () {
+        localStorage.removeItem('redBoxPositions');
+        document.querySelectorAll('.red-box').forEach(box => box.remove());
+        hasClicked = false; 
+    });
+});
+
+    </script>
+    
+</body>
+</html>
